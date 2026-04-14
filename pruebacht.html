@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login {
+            background: white;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+        input {
+            display: block;
+            margin: 10px 0;
+            padding: 8px;
+            width: 100%;
+        }
+        button {
+            padding: 10px;
+            width: 100%;
+            background: #ff1493;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login">
+    <h2 style="color: #ff69b4;">BIENVENIDA</h2>
+    <input type="text" id="usuario" placeholder="Escribe tu Nombre">
+    <input type="password" id="password" placeholder="Ingresa nuestra fecha">
+    <button onclick="login()">Ingresar</button>
+</div>
+
+<script>
+    function login() {
+        var user = document.getElementById("usuario").value;
+        var pass = document.getElementById("password").value;
+
+        // Usuario y contraseña definidos
+        if(user === "ISABEL" && pass === "02042026") {
+            window.location.href = "bienvenido.html";
+        } else {
+            alert("Usuario o contraseña incorrectos");
+        }
+    }
+</script>
+
+</body>
+</html>
